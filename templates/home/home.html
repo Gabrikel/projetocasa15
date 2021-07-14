@@ -18,13 +18,13 @@
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ms-auto my-2 my-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="#about">Página Inicial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#services">O que está incluso?</a>
+                                <a class="nav-link" href="#how">Como?</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#portfolio">Imagens</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">Sobre</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contact">Comprar</a>
@@ -37,17 +37,7 @@
             <!-- Masthead-->
             <header class="masthead">
 
-                <div
-                    class="container px-4 px-lg-5 h-100">
-                    <!-- <div class="carousel">
-                                                                                                                        <div><img src="{% static 'assets/img/portfolio/fullsize/1.jpg' %}" alt="js" /></div>
-                                                                                                                        <div><img src="{% static 'assets/img/portfolio/fullsize/2.jpg' %}" alt="java" /></div>
-                                                                                                                        <div><img src="{% static 'assets/img/portfolio/fullsize/3.jpg' %}"/></div>
-                                                                                                                        <div><img src="{% static 'assets/img/portfolio/fullsize/4.jpg' %}" alt="kotlin" /></div>
-                                                                                                                        <div><img src="{% static 'assets/img/portfolio/fullsize/5.jpg' %}" alt="scala" /></div>
-                                                                                                                        <div><img src="{% static 'assets/img/portfolio/fullsize/6.jpg' %}" alt="C#" /></div>
-                                                                                                        
-                                                                                                                    </div>-->
+                <div class="container px-4 px-lg-5 h-100">
                     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                         <div class="col-lg-8 align-self-end">
                             <h1 class="text-white font-weight-bold">
@@ -62,21 +52,21 @@
                                 <p>Com ateriais de primeira qualidade, você mesmo pode construir!</p>
                                 <p>Além de tudo é ampliável verticalmente e cabe em meio lote/ sobrado.</p>
                             </div>
-                            <a class="btn btn-primary btn-xl" href="#about">
+                            <a class="btn btn-primary btn-xl" href="#how">
                                 Descubra Como!</a>
                         </div>
                     </div>
                 </div>
             </header>
-            <section class="page-section" id="about">
+            <section class="page-section" style="padding-bottom: 100px;" id="how">
                 <div class="container">
                     <div class="text-center">
                         <h2 class="section-heading text-uppercase">Como?</h2>
                         <h3 class="section-subheading text-muted mb-5">São 3 passos importantes para realizar o seu sonho...</h3>
                     </div>
-                    <ul class="timeline">
+                    <ul class="timeline mt-3">
                         <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/lote.png' %}" alt="..."></div>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/lote.jpg' %}" alt="..."></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading mt-3">
                                     <h4>Possua um terreno!</h4>
@@ -100,7 +90,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/lego.png' %}" alt="..."><h1>1º</h1>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/lego.jpg' %}" alt="...">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading mt-3">
@@ -113,23 +103,96 @@
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/house.jpg' %}" alt="..."></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading mt-3">
-                                    <h4>Compre o projeto CASA15</h4>
-                                    <h4 class="subheading"></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Além do projeto arquitetônico e dos projetos complementares, você vai receber um manual para construção da sua casa própria</p>
-                                </div>
-                            </div>
+                            <div class="timeline-image" style="border: 0; height: 80px"><img class="img-fluid" style="width: 120px;" src="{% static 'assets/img/icons/house.png' %}" alt="..."></div>
+                            <div class="timeline-panel"></div>
                         </li>
                     </ul>
                 </div>
             </section>
             <!-- Portfolio-->
             <div id="portfolio">
-                <div class="container-fluid p-0">
+                <div class="container px-4 px-lg-5 pb-5">
+                    <h2 class="text-center mt-0">Realize seu sonho!</h2>
+                    <hr class="divider"/>
+                    <h3 class="section-subheading text-muted text-center">A CASA 15 é composta por:</h3>
+                    <div class="row gx-4 gx-lg-5">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/jantar.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Sala Jantar</h3>
+                                <p class="text-muted mb-0">2,50x3,20 Com bancada integrada à cozinha e sala de estar. É o compartimento de acesso à casa. Logo na entrada um aparador com bar e parede com iluminação decorativa direcionada. A bancada pode ser móvel sendo alterada a posição da mesa para 04 pessoas de acordo com a ocasião. Área de 8,01m².</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/estar.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Sala Estar</h3>
+                                <p class="text-muted mb-0">2,63x2,18 Integrada com a sala de jantar, área: 5,64m². O layout foi disposto de modo que a circulação não permita a interferência de passantes em frente à televisão. Área de 5,64m².</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/kitchen.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Cozinha</h3>
+                                <p class="text-muted mb-0">1,50x3,88 Layout em “L” com a pia posicionada em um ponto que impeça a visualização da louça do almoço. Acesso pela sala de jantar ou área de serviço.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/bwc.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Banheiro</h3>
+                                <p class="text-muted mb-0">1,75x1,88 Espaçoso, disposto junto a circulação e os quartos o que privatiza seu uso. Área 3,29m². Também na versão com layout acessível.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-4 gx-lg-5">
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/solteiro.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Quarto 01</h3>
+                                <p class="text-muted mb-0">3,00x4,00 Com área de 11,08m² layout para duas camas solteiro, armário embutido, escrivaninha e mesas de cabeceira. Opção de janela ou porta de correr em duas folhas para acesso aos fundos do terreno.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/casal.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Quarto 02***</h3>
+                                <p class="text-muted mb-0">2,50x4,50 Cama de casal, armário espaçoso, escrivaninha, televisão e mesas de cabeceira. Porta de correr em duas folhas para acesso aos fundos do terreno.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/circ.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Circulação</h3>
+                                <p class="text-muted mb-0">1,13x2,75 Largura generosa, facilita a circulação de móveis e a decoração do ambiente</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="mt-5">
+                                <div class="mb-2">
+                                    <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/lavanderia.jpeg' %}" alt=""></i>
+                                </div>
+                                <h3 class="h4 mb-2">Área de Serviço</h3>
+                                <p class="text-muted mb-0">1,50x4,00 Coberta, servida de espaços para: tanque, máquina de lavar, armário despensa e dois varais para secar roupas em dias de chuva. Além de espaço para depósito de gás externo, seguro, permite sua troca sem a entrada na casa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid p-0 mt-5">
                     <div class="row g-0">
                         <div class="col-lg-4 col-sm-6">
                             <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/1.jpg' %}" title="Sala Estar/Jantar">
@@ -185,6 +248,60 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/7.jpg' %}" title="Sala Estar/Jantar">
+                                <img class="img-fluid m1" src="{% static 'assets/img/portfolio/thumbnails/7.jpg' %}" alt="..."/>
+                                <div class="portfolio-box-caption">
+                                    <div class="project-category text-white-50">Casa 15</div>
+                                    <div class="project-name">Sala Estar/Jantar</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/8.jpg' %}" title="Sala Jantar/Cozinha">
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/thumbnails/8.jpg' %}" alt="..."/>
+                                <div class="portfolio-box-caption">
+                                    <div class="project-category text-white-50">CASA 15</div>
+                                    <div class="project-name">Sala Jantar/Cozinha</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/9.jpg' %}" title="Sala Jantar/Cozinha">
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/thumbnails/9.jpg' %}" alt="..."/>
+                                <div class="portfolio-box-caption">
+                                    <div class="project-category text-white-50">CASA 15</div>
+                                    <div class="project-name">Sala Jantar/Cozinha</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/10.jpg' %}" title="Quarto Casal">
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/thumbnails/10.jpg' %}" alt="..."/>
+                                <div class="portfolio-box-caption">
+                                    <div class="project-category text-white-50">CASA 15</div>
+                                    <div class="project-name">Quarto Casal</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/11.jpg' %}" title="Quarto Solteiro">
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/thumbnails/11.jpg' %}" alt="..."/>
+                                <div class="portfolio-box-caption">
+                                    <div class="project-category text-white-50">CASA 15</div>
+                                    <div class="project-name">Quarto Solteiro</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a class="portfolio-box" href="{% static 'assets/img/portfolio/fullsize/12.jpg' %}" title="Banheiro Social">
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/thumbnails/12.jpg' %}" alt="..."/>
+                                <div class="portfolio-box-caption p-3">
+                                    <div class="project-category text-white-50">Category</div>
+                                    <div class="project-name">Banheiro Social</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,9 +310,10 @@
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 justify-content-center">
                         <div class="col-lg-8 text-center">
-                            <h2 class="text-white mt-0">Compre na pré venda!</h2>
+                            <h2 class="text-white mt-0">Quem somos e qual a ideia?</h2>
                             <hr class="divider divider-light"/>
-                            <p class="text-white-75 mb-4">Texto sobre casa 15</p>
+                            <p class="text-white-75 mb-4">Somos um time de Arquitetura e Engenharia com mais de 10 anos de experiência que pensou um projeto de uma casa de baixo custo e alta qualidade, com todos os projetos necessários para execução da sua casa própria, tudo isso por um preço acessível.
+                            </p>
                             <a class="btn btn-light btn-xl" href="#services">Vantagens</a>
                         </div>
                     </div>
@@ -204,7 +322,7 @@
             <!-- Services-->
             <section class="page-section" id="services">
                 <div class="container px-4 px-lg-5">
-                    <h2 class="text-center mt-0">At Your Service</h2>
+                    <h2 class="text-center mt-0">O que você recebe:</h2>
                     <hr class="divider"/>
                     <div class="row gx-4 gx-lg-5">
                         <div class="col-lg-3 col-md-6 text-center">
@@ -212,8 +330,9 @@
                                 <div class="mb-2">
                                     <i class="bi-gem fs-1 text-primary"></i>
                                 </div>
-                                <h3 class="h4 mb-2">Sturdy Themes</h3>
-                                <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                                <h3 class="h4 mb-2">Projeto de Arquitetura</h3>
+                                <p class="text-muted mb-0">O projeto de arquitetura
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -221,7 +340,7 @@
                                 <div class="mb-2">
                                     <i class="bi-laptop fs-1 text-primary"></i>
                                 </div>
-                                <h3 class="h4 mb-2">Up to Date</h3>
+                                <h3 class="h4 mb-2">Projetos Complementares</h3>
                                 <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
                             </div>
                         </div>
@@ -230,7 +349,7 @@
                                 <div class="mb-2">
                                     <i class="bi-globe fs-1 text-primary"></i>
                                 </div>
-                                <h3 class="h4 mb-2">Ready to Publish</h3>
+                                <h3 class="h4 mb-2">Manual de Execução</h3>
                                 <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
                             </div>
                         </div>
@@ -239,7 +358,7 @@
                                 <div class="mb-2">
                                     <i class="bi-heart fs-1 text-primary"></i>
                                 </div>
-                                <h3 class="h4 mb-2">Made with Love</h3>
+                                <h3 class="h4 mb-2">Planilha de Quantitativos</h3>
                                 <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
                             </div>
                         </div>
