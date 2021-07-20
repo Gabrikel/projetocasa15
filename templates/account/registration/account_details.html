@@ -7,9 +7,8 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="text-white mt-0">Compre agora na pré-venda!</h2>
+                        <h2 class="text-white mt-0">Precisamos de mais informações:</h2>
                         <hr class="divider"/>
-                        <p class="text-white mb-5">Com a pré venda você garante seu projeto com 20% de desconto!</p>
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
@@ -18,7 +17,7 @@
                             {% csrf_token %}
 
                             {% if form.errors %}
-                                <p class="text-white">Desculpe, encontramos alguns erros:</p>
+                                <p>Desculpe, encontramos alguns erros:</p>
                                 {% for field in form %}
                                     {% if field.errors %}
                                         <div class="alert alert-primary" role="alert">
@@ -32,32 +31,51 @@
 
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                {{ form.user_name }}
-                                <label class="text-muted" for="name">Nome completo</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Você precisa digitar seu nome completo!</div>
-
+                                {{ form.cpf }}
+                                <label class="text-muted">CPF</label>
+                                <div class="invalid-feedback">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                {{ form.email }}
-                                <label for="email" class="text-muted">Email</label>
+                                {{ form.phone_number }}
+                                <label class="text-muted">Contato</label>
+                                <div class="invalid-feedback">An email is required.</div>
+                                <div class="invalid-feedback">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                {{ form.password }}
-                                <label class="text-muted">Senha</label>
+                                {{ form.cep }}
+                                <label class="text-muted">CEP</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">Digite uma senha</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                {{ form.password2 }}
-                                <label class="text-muted">Repita sua senha</label>
+                                {{ form.address_line_1 }}
+                                <label class="text-muted">Rua</label>
+                                <div class="invalid-feedback">Senha</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                {{ form.address_line_2 }}
+                                <label class="text-muted">Bairro</label>
+                                <div class="invalid-feedback">Senha</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                {{ form.city }}
+                                <label class="text-muted">Cidade</label>
+                                <div class="invalid-feedback">Senha</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                {{ form.district }}
+                                <label class="text-muted">Estado</label>
+                                <div class="invalid-feedback">Senha</div>
                             </div>
 
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-xl" type="submit">Compre agora!</button>
+                                <button class="btn btn-primary btn-xl" type="submit">Continuar Compra</button>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -65,5 +83,6 @@
             </div>
         </section>
     </header>
+    
 
 {% endblock %}

@@ -9,30 +9,7 @@
         <body
             id="page-top">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-                <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand" href="#page-top">CASA 15</a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#how">Como?</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Imagens</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">Sobre</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Comprar</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            
 
             <!-- Masthead-->
             <header class="masthead">
@@ -52,8 +29,8 @@
                                 <p>Com ateriais de primeira qualidade, você mesmo pode construir!</p>
                                 <p>Além de tudo é ampliável verticalmente e cabe em meio lote/ sobrado.</p>
                             </div>
-                            <a class="btn btn-primary btn-xl" href="#how">
-                                Descubra Como!</a>
+                            <a class="btn btn-primary btn-xl" href="{% url "account:register" %}" ">
+                                Compre agora!</a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +87,7 @@
                 </div>
             </section>
             <!-- Portfolio-->
-            <div id="portfolio">
+            <section class="page-section" style="padding-bottom: 0px;" id="portfolio">
                 <div class="container px-4 px-lg-5 pb-5">
                     <h2 class="text-center mt-0">Realize seu sonho!</h2>
                     <hr class="divider"/>
@@ -369,87 +346,11 @@
             <!-- Call to action-->
             <section class="page-section bg-dark text-white">
                 <div class="container px-4 px-lg-5 text-center">
-                    <h2 class="mb-4">DE R$499,00 por R$399,00 na pré venda!</h2>
+                    <h2 class="mb-4">DE <s>$499,00</s> por R$399,00 na pré venda!</h2>
                     <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Dividido em até 12x no cartão</a>
                 </div>
-            </section>
-            <!-- Contact-->
-            <section class="page-section" id="contact">
-                <div class="container px-4 px-lg-5">
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6 text-center">
-                            <h2 class="mt-0">Compre agora na pré-venda!</h2>
-                            <hr class="divider"/>
-                            <p class="text-muted mb-5">Com a pré venda você garante seu projeto com 20% de desconto!</p>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                        <div class="col-lg-6">
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                                <form
-                                id="contactForm" data-sb-form-api-token="API_TOKEN"> <!-- Name input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required"/>
-                                    <label for="name">Nome completo</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                                </div>
-                                <!-- Email address input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email"/>
-                                    <label for="email">Email</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                                </div>
-                                <!-- Phone number input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required"/>
-                                    <label for="phone">Número de telefone</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                </div>
-                                <!-- Message input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required"/>
-                                    <label for="phone">CPF</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                </div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                    <div class="d-none" id="submitSuccessMessage"> <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        To activate this form, sign up at
-                                        <br/>
-                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
-                                </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                    <div class="d-none" id="submitErrorMessage"> <div class="text-center text-danger mb-3">Error sending message!</div>
-                                </div>
-                                <!-- Submit Button-->
-                                <div class="d-grid">
-                                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Compre agora!</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                            <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                            <div>(28)99920-7888</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </section>           
+
         </body>
     </main>
 

@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'localflavor',
+    'phonenumber_field',
     'home',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +131,13 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Custom user model
+AUTH_USER_MODEL = 'account.UserBase'
+#LOGIN_REDIRECT_URL = '/account/dashboard'
+#LOGIN_URL = '/account/login/'
+
+# Email setting
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
