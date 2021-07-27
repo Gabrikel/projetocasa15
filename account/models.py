@@ -3,6 +3,7 @@ from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
                                         PermissionsMixin)
 from django.core.mail import send_mail
 from django.db import models
+from django.db.models.fields import CharField
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
@@ -44,7 +45,7 @@ class UserBase(AbstractBaseUser, PermissionsMixin):
     user_name = models.CharField(max_length=254)
 
     # User details
-    phone_number = PhoneNumberField()
+    phone_number = CharField(max_length=15, blank=True)
     cep = models.CharField(max_length=8, blank=True)
     address_line_1 = models.CharField(max_length=150, blank=True)
     address_line_2 = models.CharField(max_length=150, blank=True)

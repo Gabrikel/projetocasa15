@@ -13,6 +13,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(next_page='/account/login/'), name='logout'),
     path('register/', views.account_register, name='register'),
     path('account-details/', views.account_details, name='details'),
+    path('account-address/', views.account_address, name='address'),
     path('activate/<slug:uidb64>/<slug:token>/',
          views.account_activate, name='activate'),
     # User dashboard

@@ -30,25 +30,21 @@
                             {% endif %}
 
 
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                {{ form.user_name }}
-                                <label class="text-muted" for="name">Nome completo</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Você precisa digitar seu nome completo!</div>
-
-                            </div>
                             <!-- Email address input-->
+                            <label class="form-label text-white">{{ form.email.label }}</label>
                             <div class="form-floating mb-3">
                                 {{ form.email }}
                                 <label for="email" class="text-muted">Email</label>
                             </div>
                             <!-- Phone number input-->
+                            <label class="form-label text-white">{{ form.password.label }}</label>
                             <div class="form-floating mb-3">
                                 {{ form.password }}
                                 <label class="text-muted">Senha</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">Digite uma senha</div>
                             </div>
                             <!-- Message input-->
+                            <label class="form-label text-white">{{ form.password2.label }}</label>
                             <div class="form-floating mb-3">
                                 {{ form.password2 }}
                                 <label class="text-muted">Repita sua senha</label>

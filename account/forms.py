@@ -27,19 +27,13 @@ class UserLoginForm(AuthenticationForm):
 
 
 class RegistrationForm(forms.ModelForm):
-    user_name = forms.CharField(max_length=254, label='Nome', help_text='Required', error_messages={'required': 'Desculpe, você precisa de um nome!'})
-    email = forms.EmailField(max_length=100, help_text='Required', error_messages={'required': 'Desculpe, você precisa de um email!'})
-    password = forms.CharField(label='Senha', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirmação de Senha', widget=forms.PasswordInput)
+    email = forms.EmailField(max_length=100, label='Digite seu email:', help_text='Required', error_messages={'required': 'Desculpe, você precisa de um email!'})
+    password = forms.CharField(label='Informe uma senha:', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Digite sua senha', widget=forms.PasswordInput)
 
     class Meta:
         model = UserBase
         fields = ('email',)
-
-    
-    def clean_name(self):
-        user_name = self.cleaned_data['user_name']
-        return user_name
 
     def clean_email(self):
         email = self.cleaned_data['email']
@@ -56,8 +50,6 @@ class RegistrationForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['user_name'].widget.attrs.update(
-            {'class': 'form-control', 'id': 'name', 'placeholder': 'Nome completo', 'data-sb-validations':'required'})
         self.fields['email'].widget.attrs.update(
             {'class': 'form-control', 'id': 'email', 'placeholder': 'Email', 'data-sb-validations':'required'})
         self.fields['password'].widget.attrs.update(
@@ -67,19 +59,20 @@ class RegistrationForm(forms.ModelForm):
 
 
 class AccountDetailsForm(forms.ModelForm):
+    user_name = forms.CharField(max_length=254, label='Digite seu nome:', help_text='Required', error_messages={'required': 'Desculpe, você precisa de um nome!'})
     cpf = BRCPFField(label='CPF', help_text='Required', error_messages={'required': 'Informe seu cpf!'})
-    cep = BRZipCodeField(label='CEP', help_text='CEP', error_messages={'required': 'Desculpe, você precisa informar seu CEP!'})
+    phone_number = forms.CharField(max_length=15, label='Digite seu número:', error_messages={'required':'Você precisa informar um número de telefone!'})
+    
 
     class Meta:
         model = UserBase
         fields = (
-            'phone_number',
-            'address_line_1',
-            'address_line_2',
-            'city',
-            'district')
+            'user_name',)
 
-    
+    def clean_name(self):
+        user_name = self.cleaned_data['user_name']
+        return user_name
+
     def clean_cpf(self):
         cpf = self.cleaned_data['cpf']
         return cpf
@@ -88,6 +81,33 @@ class AccountDetailsForm(forms.ModelForm):
         phone_number = self.cleaned_data['phone_number']
         return phone_number
     
+    
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user_name'].widget.attrs.update(
+            {'class': 'form-control', 'id': 'name', 'placeholder': 'Nome completo', 'data-sb-validations':'required'})
+        self.fields['cpf'].widget.attrs.update(
+            {'class': 'form-control', 'id': 'cpf', 'placeholder': 'CPF', 'data-sb-validations':'required'})
+        self.fields['phone_number'].widget.attrs.update(
+            {'class': 'form-control', 'id': 'phone_number', 'placeholder': 'Contato', 'data-sb-validations':'required'})
+
+
+class AccountAddressForm(forms.ModelForm):
+    cep = BRZipCodeField(label='CEP', help_text='CEP', error_messages={'required': 'Desculpe, você precisa informar seu CEP!'})
+    address_line_1 = forms.CharField(label='Rua ou Logradouro:', help_text='CEP', error_messages={'required': 'Desculpe, você precisa informar sua Rua!'})
+    address_line_2 = forms.CharField(label='Informe seu Bairro', help_text='CEP', error_messages={'required': 'Desculpe, você precisa informar sua Rua!'})
+    city = forms.CharField(label='Informe sua Cidade:')
+    district = forms.CharField(label='Informe seu Estado:')
+
+    class Meta:
+        model = UserBase
+        fields = (
+            'address_line_1',
+            'address_line_2',
+            'city',
+            'district')
+
     def clean_cep(self):
         cep = self.cleaned_data['cep']
         return cep
@@ -107,13 +127,9 @@ class AccountDetailsForm(forms.ModelForm):
     def clean_district(self):
         district = self.cleaned_data['district']
         return district
-
+        
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['cpf'].widget.attrs.update(
-            {'class': 'form-control', 'id': 'cpf', 'placeholder': 'CPF', 'data-sb-validations':'required'})
-        self.fields['phone_number'].widget.attrs.update(
-            {'class': 'form-control', 'id': 'phone_number', 'placeholder': 'Contato', 'data-sb-validations':'required'})
         self.fields['cep'].widget.attrs.update(
             {'class': 'form-control', 'id': 'cep', 'placeholder': 'CEP', 'data-sb-validations':'required'})
         self.fields['address_line_1'].widget.attrs.update(

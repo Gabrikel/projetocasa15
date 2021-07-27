@@ -86,7 +86,26 @@
             $("#phone_number").mask("(00) 00000-0000");
             $("#cep").mask("00000-000");
             $("#cpf").mask("000.000.000-00");
-        </script>
 
-    </body>
-</html>
+            //Consultar CEP
+            $('#cep').on('blur', function () {
+
+                if ($.trim($("#cep").val()) != "") {
+
+                    $("#mensagem").html('(Aguarde, consultando CEP ...)');
+                    $.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep=" + $("#cep").val(), function () {
+
+                        if (resultadoCEP["resultado"]) {
+                            $("#address_line_1").val(unescape(resultadoCEP["tipo_logradouro"]) + " " + unescape(resultadoCEP["logradouro"]));
+                            $("#address_line_2").val(unescape(resultadoCEP["bairro"]));
+                            $("#city").val(unescape(resultadoCEP["cidade"]));
+                            $("#district").val(unescape(resultadoCEP["uf"]));
+                        }
+
+                        $("#mensagem").html('');
+                    });
+                }
+            });
+        </script>
+    </html>
+</body></html>

@@ -9,7 +9,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.views.decorators.csrf import csrf_exempt
 
 
-from .forms import RegistrationForm, AccountDetailsForm
+from .forms import RegistrationForm, AccountDetailsForm, AccountAddressForm
 from .models import UserBase
 from .tokens import account_activation_token
 
@@ -22,33 +22,9 @@ def account_register(request):
         registerForm = RegistrationForm(request.POST)
         if registerForm.is_valid():
             user = registerForm.save(commit=False)
-            user.user_name = registerForm.cleaned_data['user_name']
             user.email = registerForm.cleaned_data['email']
             user.set_password(registerForm.cleaned_data['password']) 
             user.is_active = False
-            user.save()
-            return redirect('account:details')
-
-    else:
-        registerForm = RegistrationForm()
-    return render(request, 'account/registration/register.html', {'form': registerForm})
-
-@csrf_exempt
-def account_details(request):
-    if request.user.is_authenticated:
-        return redirect('/')
-
-    if request.method == 'POST':
-        detailForm = AccountDetailsForm(request.POST)
-        if detailForm.is_valid():
-            user = detailForm.save(commit=False)
-            user.cpf = detailForm.cleaned_data['cpf']
-            user.phone_number = detailForm.cleaned_data['number_phone']
-            user.cep = detailForm.cleaned_data['cep']
-            user.address_line_1 = detailForm.cleaned_data['address_line_1'] 
-            user.address_line_2 = detailForm.cleaned_data['address_line_2']
-            user.city = detailForm.cleaned_data['city']
-            user.district = detailForm.cleaned_data['district']
             user.save()
 
             #Setup email
@@ -61,12 +37,43 @@ def account_details(request):
                 'token': account_activation_token.make_token(user),
             })
             user.email_user(subject=subject, message=message)
-            return HttpResponse('registered succesfully and activation sent')
+            return HttpResponse('Cheque seu email registrado e clique no link para ativação da sua conta!')
+
+    else:
+        registerForm = RegistrationForm()
+    return render(request, 'account/registration/register.html', {'form': registerForm})
+
+@csrf_exempt
+def account_details(request):
+    if request.method == 'POST':
+        detailForm = AccountDetailsForm(request.POST)
+        if detailForm.is_valid():
+            user = request.user
+            user.user_name = detailForm.cleaned_data['user_name']
+            user.cpf = detailForm.cleaned_data['cpf']
+            user.phone_number = detailForm.cleaned_data['phone_number']
+            user.save()
+            return redirect('account:address')
     else:
         detailForm = AccountDetailsForm()
     return render(request, 'account/registration/account_details.html', {'form': detailForm})
 
 
+def account_address(request):
+    if request.method == 'POST':
+        addressForm = AccountAddressForm(request.POST)
+        if addressForm.is_valid():
+            user = request.user
+            user.cep = addressForm.cleaned_data['cep']
+            user.address_line_1 = addressForm.cleaned_data['address_line_1'] 
+            user.address_line_2 = addressForm.cleaned_data['address_line_2']
+            user.city = addressForm.cleaned_data['city']
+            user.district = addressForm.cleaned_data['district']
+            user.save()
+            return redirect('home:home')
+    else:
+        addressForm = AccountAddressForm()
+    return render(request, 'account/registration/account_address.html', {'form': addressForm})
 
 def account_activate(request, uidb64, token):
     try:
@@ -79,6 +86,6 @@ def account_activate(request, uidb64, token):
         user.is_active = True
         user.save()
         login(request, user)
-        return redirect('account:dashboard')
+        return redirect('account:details')
     else:
-        return render(request, 'account/registration/activation_invalid.html')
+        return render(request, 'home.html')
