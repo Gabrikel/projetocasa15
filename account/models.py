@@ -41,12 +41,12 @@ class UserBase(AbstractBaseUser, PermissionsMixin):
 
     #Base Information
     email = models.EmailField(_('email address'), unique=True)
-    cpf = models.CharField(max_length=11, blank=True)
+    cpf = models.CharField(max_length=15, blank=True)
     user_name = models.CharField(max_length=254)
 
     # User details
     phone_number = CharField(max_length=15, blank=True)
-    cep = models.CharField(max_length=8, blank=True)
+    cep = models.CharField(max_length=10, blank=True)
     address_line_1 = models.CharField(max_length=150, blank=True)
     address_line_2 = models.CharField(max_length=150, blank=True)
     city = models.CharField(max_length=150, blank=True)
