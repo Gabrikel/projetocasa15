@@ -16,6 +16,7 @@ docker-compose==1.29.2
 dockerpty==0.4.1
 docopt==0.6.2
 environ==1.0
+gunicorn==20.1.0
 idna==3.2
 jsonschema==3.2.0
 mercadopago==2.0.7
