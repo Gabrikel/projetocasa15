@@ -7,6 +7,7 @@ charset-normalizer==2.0.3
 cryptography==3.4.7
 distro==1.5.0
 Django==3.2.5
+django-environ==0.4.5
 django-localflavor==3.1
 django-model-utils==4.1.1
 django-phonenumber-field==5.2.0
@@ -14,6 +15,7 @@ docker==5.0.0
 docker-compose==1.29.2
 dockerpty==0.4.1
 docopt==0.6.2
+environ==1.0
 idna==3.2
 jsonschema==3.2.0
 localflavor==1.9
@@ -34,3 +36,4 @@ sqlparse==0.4.1
 texttable==1.6.4
 urllib3==1.26.6
 websocket-client==0.59.0
+whitenoise==5.3.0
