@@ -6,47 +6,47 @@
 
 
     <main>
-        <body
-            id="page-top">
+        <body id="page-top">
             <!-- Navigation-->
-            
+
 
             <!-- Masthead-->
-            <header class="masthead">
-
-                <div class="container px-4 px-lg-5 h-100">
+                <header class="masthead"> <div class="container px-4 px-lg-5 h-100">
                     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                         <div class="col-lg-8 align-self-end">
                             <h1 class="text-white font-weight-bold">
                                 <b>Casa 15</b>
                             </h1>
-                            <h2 class="text-white font-weight-bold mb-5">Uma Casa por 15 mil reais!</h2>
+                            <h2 class="text-white font-weight-bold mb-5">Sua Casa a partir de 15 mil reais!</h2>
                             <hr class="divider mb-5"/>
                         </div>
                         <div class="col-lg-8 align-self-baseline">
                             <div class="text-white-75 mb-5">
-                                <p>Já pensou em sair do aluguel? Realize seu sonho!</p>
-                                <p>Com ateriais de primeira qualidade, você mesmo pode construir!</p>
-                                <p>Além de tudo é ampliável verticalmente e cabe em meio lote/ sobrado.</p>
+                                <h4>
+                                    <b>Nós temos o PROJETO para você construir uma CASA acessível, ampliável e adaptável gastando apenas 15 mil reais em materiais.</b>
+                                </h4>
+                                <!--<p>Com materiais de primeira qualidade, você mesmo pode construir!</p>
+                                                                                                <p>Além de tudo é ampliável verticalmente e cabe em meio lote/ sobrado.</p>-->
                             </div>
-                            <a class="btn btn-primary btn-xl" href="{% url "account:register" %}" ">
-                                Compre agora!</a>
+                            <a class="btn btn-primary btn-xl" href="#portfolio">
+                                <b>Conheça o Projeto!</b>
+                            </a>
                         </div>
                     </div>
                 </div>
             </header>
-            <section class="page-section" style="padding-bottom: 100px;" id="how">
+            <section class="page-section" style="padding-bottom: 0px;" id="how">
                 <div class="container">
                     <div class="text-center">
                         <h2 class="section-heading text-uppercase">Como?</h2>
-                        <h3 class="section-subheading text-muted mb-5">São 3 passos importantes para realizar o seu sonho...</h3>
+                        <h3 class="section-subheading text-muted mb-5">São 3 passos importantes para realizar esse sonho...</h3>
                     </div>
                     <ul class="timeline mt-3">
                         <li>
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/lote.jpg' %}" alt="..."></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading mt-3">
-                                    <h4>Possua um terreno!</h4>
+                                    <h4>1º - Ter um terreno</h4>
                                     <h5 class="subheading"></h5>
                                 </div>
                                 <div class="timeline-body">
@@ -58,11 +58,11 @@
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/icons/project.jpg' %}" alt="..."></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading mt-3">
-                                    <h4>Compre o projeto CASA15</h4>
+                                    <h4>2º - Compre o projeto CASA15</h4>
                                     <h4 class="subheading"></h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Além do projeto arquitetônico e dos projetos complementares, você vai receber um manual para construção da sua casa própria</p>
+                                    <p class="text-muted">Vocẽ vai receber um projeto arquitetônico, todos os projetos complementares (projeto estrutural, elétrico e hidraulico) e um manual para você construir a sua casa própria!</p>
                                 </div>
                             </div>
                         </li>
@@ -71,11 +71,13 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading mt-3">
-                                    <h4>Siga as instruções do projeto</h4>
+                                    <h4>3º - Construa você mesmo ou contrate a mão de obra</h4>
                                     <h4 class="subheading"></h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Com o projeto CASA 15 você mesmo pode executar sua obra, é tão fácil quanto montar lego com técnicas construtivas simplificadas o custo da execução é reduzido drásticamente.</p>
+                                    <p class="text-muted">Com o
+                                        <b>Projeto CASA 15</b>
+                                        você mesmo pode construir ou contratar a mão de obra, a decisão é sua!<br>Com nossa técnica construtiva, construir é muito simples! Mas caso decida contratar, o custo ainda é muito baixo variando entre 8 a 10 mil reais, com tempo de 2 meses!</p>
                                 </div>
                             </div>
                         </li>
@@ -86,10 +88,10 @@
                     </ul>
                 </div>
             </section>
-            <!-- Portfolio-->
+            <!-- Descrição-->
             <section class="page-section" style="padding-bottom: 0px;" id="portfolio">
                 <div class="container px-4 px-lg-5 pb-5">
-                    <h2 class="text-center mt-0">Realize seu sonho!</h2>
+                    <h2 class="text-center mt-0">Realize um sonho!</h2>
                     <hr class="divider"/>
                     <h3 class="section-subheading text-muted text-center">A CASA 15 é composta por:</h3>
                     <div class="row gx-4 gx-lg-5">
@@ -99,7 +101,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/jantar.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Sala Jantar</h3>
-                                <p class="text-muted mb-0">2,50x3,20 Com bancada integrada à cozinha e sala de estar. É o compartimento de acesso à casa. Logo na entrada um aparador com bar e parede com iluminação decorativa direcionada. A bancada pode ser móvel sendo alterada a posição da mesa para 04 pessoas de acordo com a ocasião. Área de 8,01m².</p>
+                                <p class="text-muted mb-0">2,50x3,20m - Com bancada integrada à cozinha e sala de estar. É o compartimento de acesso à casa. Logo na entrada um aparador com bar e parede com iluminação decorativa direcionada. A bancada pode ser móvel sendo alterada a posição da mesa para 04 pessoas de acordo com a ocasião. Área de 8,00m².</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -108,7 +110,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/estar.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Sala Estar</h3>
-                                <p class="text-muted mb-0">2,63x2,18 Integrada com a sala de jantar, área: 5,64m². O layout foi disposto de modo que a circulação não permita a interferência de passantes em frente à televisão. Área de 5,64m².</p>
+                                <p class="text-muted mb-0">2,63x2,18m - Integrada com a sala de jantar. O layout foi disposto de modo que a circulação não permita a interferência de passantes em frente à televisão. Área de 5,64m².</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -117,7 +119,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/kitchen.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Cozinha</h3>
-                                <p class="text-muted mb-0">1,50x3,88 Layout em “L” com a pia posicionada em um ponto que impeça a visualização da louça do almoço. Acesso pela sala de jantar ou área de serviço.</p>
+                                <p class="text-muted mb-0">1,50x3,88m - O layout em “L” da cozinha esconde a pia com a louça do almoço. Tem acesso pela sala de jantar ou área de serviço. Área 5,82m².</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -126,7 +128,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/bwc.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Banheiro</h3>
-                                <p class="text-muted mb-0">1,75x1,88 Espaçoso, disposto junto a circulação e os quartos o que privatiza seu uso. Área 3,29m². Também na versão com layout acessível.</p>
+                                <p class="text-muted mb-0">1,75x1,88m - Espaçoso, entrada no corredor próximo aos quartos. Também na versão com layout acessível. Área 3,29m².</p>
                             </div>
                         </div>
                     </div>
@@ -137,7 +139,8 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/solteiro.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Quarto 01</h3>
-                                <p class="text-muted mb-0">3,00x4,00 Com área de 11,08m² layout para duas camas solteiro, armário embutido, escrivaninha e mesas de cabeceira. Opção de janela ou porta de correr em duas folhas para acesso aos fundos do terreno.</p>
+                                <p class="text-muted mb-0">3,00x4,00m - Layout para duas camas solteiro, armário embutido, escrivaninha e mesas de cabeceira. Opção de janela ou porta de correr em duas folhas para acesso aos fundos do terreno. Área de 12,00m².
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -146,7 +149,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/casal.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Quarto 02***</h3>
-                                <p class="text-muted mb-0">2,50x4,50 Cama de casal, armário espaçoso, escrivaninha, televisão e mesas de cabeceira. Porta de correr em duas folhas para acesso aos fundos do terreno.</p>
+                                <p class="text-muted mb-0">2,50x4,50m - Cama de casal, armário espaçoso, escrivaninha, televisão e mesas de cabeceira. Porta de correr em duas folhas para acesso aos fundos do terreno. Área de 11,25m²</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -155,7 +158,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/circ.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Circulação</h3>
-                                <p class="text-muted mb-0">1,13x2,75 Largura generosa, facilita a circulação de móveis e a decoração do ambiente</p>
+                                <p class="text-muted mb-0">1,13x2,75m - Largura generosa, facilita a circulação de móveis e a decoração do ambiente. Área 3,11m².</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
@@ -164,7 +167,7 @@
                                     <i class="fs-1 text-primary"><img class="icon-image" src="{% static 'assets/img/icons/lavanderia.jpeg' %}" alt=""></i>
                                 </div>
                                 <h3 class="h4 mb-2">Área de Serviço</h3>
-                                <p class="text-muted mb-0">1,50x4,00 Coberta, servida de espaços para: tanque, máquina de lavar, armário despensa e dois varais para secar roupas em dias de chuva. Além de espaço para depósito de gás externo, seguro, permite sua troca sem a entrada na casa.</p>
+                                <p class="text-muted mb-0">1,50x4,00m - Coberta, servida de espaços para: tanque, máquina de lavar, armário despensa e dois varais para secar roupas em dias de chuva. Além de espaço para depósito de gás externo, seguro, permite sua troca sem a entrada na casa. Área 6,00m².</p>
                             </div>
                         </div>
                     </div>
@@ -289,9 +292,9 @@
                         <div class="col-lg-8 text-center">
                             <h2 class="text-white mt-0">Quem somos e qual a ideia?</h2>
                             <hr class="divider divider-light"/>
-                            <p class="text-white-75 mb-4">Somos um time de Arquitetura e Engenharia com mais de 10 anos de experiência que pensou um projeto de uma casa de baixo custo e alta qualidade, com todos os projetos necessários para execução da sua casa própria, tudo isso por um preço acessível.
+                            <p class="text-white-75 mb-4">Somos um time de Arquitetos e Engenheiros com mais de 10 anos de experiência e  projetamos uma habitação de baixo custo e alta qualidade, pensada para ser acessível, ampliável e adaptável. Oferecemos todos os projetos necessários para execução (arquitetônico, estrutural, hidrossanitário e elétrico), além de planilhas quantitativas e orçamentárias e manual de execução. Com base em uma técnica construtiva única, a Casa 15 foi pensada para ser viável economicamente e um investimento garantido.
                             </p>
-                            <a class="btn btn-light btn-xl" href="#services">Vantagens</a>
+                            <a class="btn btn-light btn-xl" href="#action">COMPRE AGORA NA PRÉ-VENDA</a>
                         </div>
                     </div>
                 </div>
@@ -304,39 +307,27 @@
                     <div class="row gx-4 gx-lg-5">
                         <div class="col-lg-3 col-md-6 text-center">
                             <div class="mt-5">
-                                <div class="mb-2">
-                                    <i class="bi-gem fs-1 text-primary"></i>
-                                </div>
                                 <h3 class="h4 mb-2">Projeto de Arquitetura</h3>
-                                <p class="text-muted mb-0">O projeto de arquitetura
+                                <p class="text-muted mb-0">É o conjunto de desenhos responsável por guiar a execução da obra,
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
                             <div class="mt-5">
-                                <div class="mb-2">
-                                    <i class="bi-laptop fs-1 text-primary"></i>
-                                </div>
                                 <h3 class="h4 mb-2">Projetos Complementares</h3>
-                                <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                                <p class="text-muted mb-0">Todos os desenhos complementares necessários com detalhamento da rede elétrica, da parte hidráulica e estrutural.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
                             <div class="mt-5">
-                                <div class="mb-2">
-                                    <i class="bi-globe fs-1 text-primary"></i>
-                                </div>
                                 <h3 class="h4 mb-2">Manual de Execução</h3>
-                                <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                                <p class="text-muted mb-0">Um manual com todo o passo a passo de execução da obra</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 text-center">
                             <div class="mt-5">
-                                <div class="mb-2">
-                                    <i class="bi-heart fs-1 text-primary"></i>
-                                </div>
                                 <h3 class="h4 mb-2">Planilha de Quantitativos</h3>
-                                <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                                <p class="text-muted mb-0">Lista de materiais utilizados.</p>
                             </div>
                         </div>
                     </div>
@@ -344,12 +335,29 @@
             </section>
 
             <!-- Call to action-->
-            <section class="page-section bg-dark text-white">
+            <section class="page-section bg-dark text-white" id="action">
                 <div class="container px-4 px-lg-5 text-center">
-                    <h2 class="mb-4">DE <s>$499,00</s> por R$399,00 na pré venda!</h2>
-                <a class="btn btn-light btn-xl" href="{% url "account:register" %}">Dividido em até 12x no cartão</a>
+                    <h1 class="mb-2">
+                        <b>Compre com desconto na pré-venda!</b>
+                    </h1>
+                    <h2 class="mb-4">por R$399,00 à vista até 27 de Agosto!</h2>
+                    <h4 class="mb-4">Ou em até 12x de R$49,90</h4>
+                    <h5 class="mb-2">Formas de pagamento:</h5>
+                    <div class="mb-4">
+                        <span>
+                            <i class="fs-1 text-primary px-2"><img style="height: 30px;" src="{% static 'assets/img/icons/master.png' %}" alt="Crédito Mastercard"></i>
+                            <i class="fs-1 text-primary px-2"><img style="height: 30px;" src="{% static 'assets/img/icons/visa.png' %}" alt="Crédito Visa"></i>
+                            <i class="fs-1 text-primary px-2"><img style="height: 30px;" src="{% static 'assets/img/icons/pix.png' %}" alt="PIX"></i>
+                            <i class="fs-1 text-primary px-2"><img style="height: 30px;" src="{% static 'assets/img/icons/boleto.png' %}" alt="Boleto bancário"></i>
+                        </span>
+                    </div>
+                    <a class="btn btn-light btn-xl" href="{% url "account:register" %}">
+                        <h5>
+                            <b>COMPRE AGORA</b>
+                        </h5>
+                    </a>
                 </div>
-            </section>           
+            </section>
 
         </body>
     </main>
